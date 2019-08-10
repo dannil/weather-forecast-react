@@ -2,14 +2,21 @@
   "name": "weather-forecast",
   "version": "0.0.1",
   "description": "weather-forecast description",
+  "author": "Daniel Nilsson",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dannil/weather-forecast.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast"
+  ],
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "react": "16.8.6",
     "react-dom": "16.8.6"
