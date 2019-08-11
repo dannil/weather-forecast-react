@@ -7,7 +7,7 @@ interface IHelloProps {
 }
 
 interface IHelloState {
-    isLoaded: boolean;
+    isTextClicked: boolean;
 }
 
 class Hello extends React.Component<IHelloProps, IHelloState> {
@@ -16,7 +16,7 @@ class Hello extends React.Component<IHelloProps, IHelloState> {
         super(props);
 
         this.state = {
-            isLoaded: false,
+            isTextClicked: false,
         };
     }
 
@@ -25,12 +25,18 @@ class Hello extends React.Component<IHelloProps, IHelloState> {
     }
 
     public render(): JSX.Element {
+        const isTextClicked: string = (this.state.isTextClicked ? "yes" : "no");
         return (
             <div className={styles.hello}>
                 <h1>Hello {this.props.compiler} and {this.props.framework}!</h1>
-                <p>My loaded state is {String(this.state.isLoaded)}</p>
+                <p onClick={this.handleOnClick}>Click me! Is this text clicked: {isTextClicked}</p>
             </div>
         );
+    }
+
+    private handleOnClick = () => {
+        console.log("onClick");
+        this.setState({ isTextClicked: !this.state.isTextClicked });
     }
 
 }
