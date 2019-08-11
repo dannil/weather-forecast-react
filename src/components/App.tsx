@@ -1,15 +1,14 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import * as styles from "./assets/css/style.css";
+import * as styles from "../assets/css/style.css";
 
-import Hello from "./components/Hello";
+import Hello from "./Hello";
 
 class App extends React.Component<{}, {}> {
 
     public render(): JSX.Element {
         return (
             <div className={styles.app}>
-                <Hello compiler="TypeScripr" framework="React11" />
+                <Hello compiler="TypeScsssripr" framework="React11" />
                 <Hello compiler="TyScasds" framework="REA" />
             </div>
         );
@@ -17,4 +16,4 @@ class App extends React.Component<{}, {}> {
 
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
