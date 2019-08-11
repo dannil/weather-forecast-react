@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as style from "../css/style.css";
+import * as styles from "../assets/css/style.css";
 
 interface IHelloProps {
     compiler: string;
@@ -26,7 +26,7 @@ class Hello extends React.Component<IHelloProps, IHelloState> {
 
     public render(): JSX.Element {
         return (
-            <div className={style.hello}>
+            <div className={styles.hello}>
                 <h1>Hello {this.props.compiler} and {this.props.framework}!</h1>
                 <p>My loaded state is {String(this.state.isLoaded)}</p>
             </div>
