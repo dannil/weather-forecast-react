@@ -1,5 +1,10 @@
+@import url("./bootstrap.min.css");
+
+body {
+    background-color: transparent;
+}
+
 html {
-    margin: 0 auto;
     height: 100%;
     background-image: linear-gradient(#7ebee9, #c8d0d6);
 }
@@ -11,5 +16,16 @@ html {
 }
 
 .hello {
-    color: #5447a0;
+    color: #5b5964;
+}
+
+.toolbar {
+    background-color: #FFFFFF;
+    text-align: left;
+    padding: 8px 8px 8px 8px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.toolbar p {
+    margin-bottom: 0px;
 }
