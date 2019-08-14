@@ -1,18 +1,18 @@
 import * as React from "react";
 import * as styles from "../assets/css/style.css";
 
-interface IHelloProps {
-    header: string;
-    text: string;
+interface IToolbarProps {
+    time: Date;
+    temperature: number;
 }
 
-interface IHelloState {
+interface IToolbarState {
     isExpanded: boolean;
 }
 
-class Hello extends React.Component<IHelloProps, IHelloState> {
+class Toolbar extends React.Component<IToolbarProps, IToolbarState> {
 
-    constructor(props: Readonly<IHelloProps>) {
+    constructor(props: Readonly<IToolbarProps>) {
         super(props);
 
         this.state = {
@@ -20,17 +20,17 @@ class Hello extends React.Component<IHelloProps, IHelloState> {
         };
     }
 
-    public componentDidMount(): void {
+    // public componentDidMount(): void {
 
-    }
+    // }
 
     public render(): JSX.Element {
         return (
-            <div className={styles.toolbar}>
-                <h2 onClick={this.handleIsExpanded}>{this.props.header}</h2>
-                { this.state.isExpanded && 
+            <div className={styles.toolbar} onClick={this.handleIsExpanded}>
+                <h2>{this.props.time.toString()}</h2>
+                { this.state.isExpanded &&
                     <div className={styles.collapsable}>
-                        <p>{this.props.text}</p>
+                        <p>{this.props.temperature}</p>
                     </div>
                 }
             </div>
@@ -43,4 +43,4 @@ class Hello extends React.Component<IHelloProps, IHelloState> {
 
 }
 
-export default Hello;
+export default Toolbar;
